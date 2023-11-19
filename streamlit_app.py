@@ -10,6 +10,13 @@ st.set_page_config(layout="wide", page_title="LLAMA2-Beta-Testing")
 
 # Rest of your Streamlit app code goes here
 
+st.markdown("""
+<style>
+#MainMenu {visibility: hidden;}
+.sidebar .sidebar-content {padding-top: 0;}
+</style>
+""", unsafe_allow_html=True)
+
 with st.sidebar:
     st.title('🤖💬 OpenAI Chatbot')
     if 'OPENAI_API_KEY' in st.secrets:
