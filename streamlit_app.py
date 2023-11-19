@@ -3,6 +3,13 @@
 import openai
 import streamlit as st
 
+
+
+# Set dark theme as the default
+st.set_page_config(layout="wide", page_title="LLAMA2-Beta-Testing", page_icon="🔮", theme="dark")
+
+# Rest of your Streamlit app code goes here
+
 with st.sidebar:
     st.title('🤖💬 OpenAI Chatbot')
     if 'OPENAI_API_KEY' in st.secrets:
