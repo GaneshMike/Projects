@@ -6,7 +6,7 @@ import streamlit as st
 
 
 # Set dark theme as the default
-st.set_page_config(layout="wide", page_title="LLAMA2-Beta-Testing", page_icon="🔮", theme="dark")
+st.set_page_config(layout="wide", page_title="LLAMA2-Beta-Testing",theme="dark")
 
 # Rest of your Streamlit app code goes here
 
