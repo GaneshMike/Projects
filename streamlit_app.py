@@ -10,21 +10,21 @@ st.set_page_config(layout="wide", page_title="LLAMA2-Beta-Testing")
 
 # Rest of your Streamlit app code goes here
 
-st.markdown("""
-<style>
-#MainMenu {visibility: hidden;}
-.sidebar .sidebar-content {padding-top: 0;}
-</style>
-""", unsafe_allow_html=True)
+# st.markdown("""
+# <style>
+# #MainMenu {visibility: hidden;}
+# .sidebar .sidebar-content {padding-top: 0;}
+# </style>
+# """, unsafe_allow_html=True)
 
-with st.sidebar:
-    st.title('🤖💬 OpenAI Chatbot')
-    openai.api_key = st.text_input('Enter OpenAI API token:', type='password')
+# with st.sidebar:
+#     st.title('🤖💬 OpenAI Chatbot')
+#     openai.api_key = st.text_input('Enter OpenAI API token:', type='password')
     
-    if not (openai.api_key.startswith('sk-') and len(openai.api_key)==51):
-        st.warning('Please enter your credentials!', icon='⚠️')
-    else:
-        st.success('Proceed to entering your prompt message!', icon='👉')
+#     if not (openai.api_key.startswith('sk-') and len(openai.api_key)==51):
+#         st.warning('Please enter your credentials!', icon='⚠️')
+#     else:
+#         st.success('Proceed to entering your prompt message!', icon='👉')
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
