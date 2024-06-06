@@ -6,7 +6,7 @@ import streamlit as st
 
 
 # Set dark theme as the default
-st.set_page_config(layout="wide", page_title="LLAMA2-Beta-Testing")
+st.set_page_config(layout="wide", page_title="streamlit")
 
 # Rest of your Streamlit app code goes here
 
@@ -19,7 +19,7 @@ st.markdown("""
 
 with st.sidebar:
     st.title('🤖💬 ')
-    openai.api_key = st.text_input('Enter OpenAI API token:', type='password')
+    openai.api_key = st.text_input('Enter:', type='password')
     
     if not (openai.api_key.startswith('sk-') and len(openai.api_key)==51):
         st.warning('Please enter your credentials!', icon='⚠️')
