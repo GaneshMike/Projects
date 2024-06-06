@@ -18,13 +18,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.title('🤖💬 ')
     openai.api_key = st.text_input('Enter:', type='password')
     
     if not (openai.api_key.startswith('sk-') and len(openai.api_key)==51):
-        st.warning('Please enter your credentials!', icon='⚠️')
+        st.warning('Please enter your credentials!')
     else:
-        st.success('Proceed to entering your prompt message!', icon='👉')
+        st.success('Proceed to entering your prompt message!')
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
